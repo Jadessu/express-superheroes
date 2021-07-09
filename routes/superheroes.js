@@ -13,4 +13,7 @@ export {
 }
 
 router.get("/", superheroesCtrl.index)
+router.get("/new", superheroesCtrl.new)
 router.get("/:id", superheroesCtrl.show)
+router.post("/", superheroesCtrl.create)
+router.delete("/:id", superheroesCtrl.delete)

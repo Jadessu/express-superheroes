@@ -4,6 +4,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
+import methodOverride from "method-override"
 
 import { router as indexRouter } from './routes/index.js'
 import { router as superheroesRouter } from './routes/superheroes.js'
@@ -17,6 +18,7 @@ app.set(
 )
 app.set('view engine', 'ejs')
 
+
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -26,9 +28,18 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
+app.use(methodOverride("_method"))
 
 app.use('/', indexRouter)
 app.use('/superheroes', superheroesRouter)
+
+app.use(function(req, res, next){
+  console.log("hello, friend")
+  req.time = new Date().toLocaleTimeString()
+  next()
+  
+})
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

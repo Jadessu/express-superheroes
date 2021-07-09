@@ -3,7 +3,7 @@ body{
   font-family: 'Bangers', cursive, serif;
   font-size: 1.5rem;
   background-image: 
-    url('https://wallpapercave.com/wp/nIQmPs4.jpg');
+    url('https://wallpaperaccess.com/full/3170695.jpg');
   background-image: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,11 +15,11 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: black;
+  color: rgb(255, 255, 255);
   
 }
 h1{
-  text-shadow: 2px 2px 4px rgb(235, 221, 221);
+  text-shadow: 2px 2px 2px rgb(41, 16, 16);
 }
 
 li{
@@ -27,20 +27,4 @@ li{
   margin: 20px;
   font-weight: bold;
   
-}
-
-.delete-form {
-  display: inline-block;
-  margin-right: 10px;
-}
-	
-.delete-form > button {
-  color: red;
-}
-	
-li {
-  list-style: none;
-}
-#delete{
-  margin-left: 30px;
 }

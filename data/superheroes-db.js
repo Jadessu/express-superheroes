@@ -1,6 +1,8 @@
 export { 
 	find,
     findById,
+    create,
+    findByIdAndDelete
 }
 
 const superheroes = [
@@ -15,6 +17,25 @@ const superheroes = [
   {name: 'Aquaman', superpowers: true, _id: 139618},
   {name: 'Green Arrow', superpowers: false, _id: 156208},
 ]
+
+function findByIdAndDelete(id, callback) {
+  try { 
+    const idx = superheroes.findIndex(superhero => superhero._id == parseInt(id))
+    const deletedSuperhero = superheroes.splice(idx, 1)
+    if (!deletedSuperhero.length ) throw new Error ('No Superhero was deleted')
+    return callback(null, deletedSuperhero[0])
+  } catch(error) {
+    return callback(error, null)
+  }
+}
+
+function create(superhero, callback){
+  superhero._id = Date.now() % 1000000
+  superhero.superpowers = false
+  superheroes.push(superhero)
+  return callback(null, superhero)
+
+}
 
 const find = (conditions, callback) => {
   // see if this works, if not, execute the code in the catch block
@@ -31,8 +52,8 @@ const find = (conditions, callback) => {
       throw new Error('Must find by properties that exist on the array items')
     } else {
 			// Finally actually find what we're looking for
-      return callback(null, superheroes.filter((todo) =>
-        conditionKeys.every((propKey) => todo[propKey] === conditions[propKey])
+      return callback(null, superheroes.filter((superhero) =>
+        conditionKeys.every((propKey) => superhero[propKey] === conditions[propKey])
       ))
     }
 	// deal with errors
@@ -52,3 +73,7 @@ const findById = (id, callback) =>{
       return callback(error, null)
     }
   }
+
+ 
+
+  
