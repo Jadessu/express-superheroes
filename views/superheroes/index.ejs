@@ -10,6 +10,7 @@
   <title>Document</title>
 </head>
   <body>
+    <% time = new Date().toLocaleTimeString() %>
     <h1>Superheroes as of <%= time %></h1>
     <% if(error) { %>
       <h2><%= error %></h2>

@@ -3,12 +3,12 @@ body{
   font-family: 'Bangers', cursive, serif;
   font-size: 1.5rem;
   background-image: 
-    url('https://wallpapercave.com/wp/nIQmPs4.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: black;
+    url('https://images.hdqwalls.com/wallpapers/flash-vector-art-4y.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -17,11 +17,11 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: black;
+  color: rgb(247, 247, 247);
   
 }
 h1{
-  text-shadow: 2px 2px 4px rgb(235, 221, 221);
+  text-shadow: 2px 2px 4px rgb(17, 3, 3);
 }
 
 li{

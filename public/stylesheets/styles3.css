@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 body{
+  height: 100%;
   font-family: 'Bangers', cursive, serif;
   font-size: 1.5rem;
   background-image: 
-    url('https://wallpaperaccess.com/full/3170695.jpg');
-  background-image: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    url('https://images.hdqwalls.com/wallpapers/justice-league-dark-background-ad.jpg');
+   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+  
   position: fixed;
   top: 50%;
   left: 50%;
@@ -27,4 +32,8 @@ li{
   margin: 20px;
   font-weight: bold;
   
+}
+
+#delete{
+  float: left;
 }

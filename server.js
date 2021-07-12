@@ -34,7 +34,6 @@ app.use('/', indexRouter)
 app.use('/superheroes', superheroesRouter)
 
 app.use(function(req, res, next){
-  console.log("hello, friend")
   req.time = new Date().toLocaleTimeString()
   next()
   
